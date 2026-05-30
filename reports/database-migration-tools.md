@@ -2,426 +2,379 @@
 
 Topic: database migration tools
 
-## Overview - Claude Code Docs
+## Cloud Database Migration - AWS Database Migration Service (AWS DMS) - AWS
 
-[Skip to main content](https://code.claude.com/docs#content-area)
+## Select your cookie preferences
 
-> ## Documentation Index
->
-> Fetch the complete documentation index at: [https://code.claude.com/docs/llms.txt](https://code.claude.com/docs/llms.txt)
->
-> Use this file to discover all available pages before exploring further.
+We use essential cookies and similar tools that are necessary to provide our site and services. We use performance cookies to collect anonymous statistics, so we can understand how customers use our site and make improvements. Essential cookies cannot be deactivated, but you can choose “Customize” or “Decline” to decline performance cookies.
 
-Claude Code is an AI-powered coding assistant that helps you build features, fix bugs, and automate development tasks. It understands your entire codebase and can work across multiple files and tools to get things done.
+If you agree, AWS and approved third parties will also use cookies to provide useful site features, remember your preferences, and display relevant content, including relevant advertising. To accept or decline all non-essential cookies, choose “Accept” or “Decline.” To make more detailed choices, choose “Customize.”
 
-## [​](https://code.claude.com/docs\#get-started)  Get started
+AcceptDeclineCustomize
 
-Choose your environment to get started. Most surfaces require a [Claude subscription](https://claude.com/pricing?utm_source=claude_code&utm_medium=docs&utm_content=overview_pricing) or [Anthropic Console](https://console.anthropic.com/) account. The Terminal CLI and VS Code also support [third-party providers](https://code.claude.com/docs/en/third-party-integrations).
+## Customize cookie preferences
 
-- Terminal
+We use cookies and similar tools (collectively, "cookies") for the following purposes.
 
-- VS Code
+### Essential
 
-- Desktop app
+Essential cookies are necessary to provide our site and services and cannot be deactivated. They are usually set in response to your actions on the site, such as setting your privacy preferences, signing in, or filling in forms.
 
-- Web
+Allowed
 
-- JetBrains
+### Performance
 
+Performance cookies provide anonymous statistics about how customers navigate our site so we can improve site experience and performance. Approved third parties may perform analytics on our behalf, but they cannot use the data for their own purposes.
 
-The full-featured CLI for working with Claude Code directly in your terminal. Edit files, run commands, and manage your entire project from the command line.To install Claude Code, use one of the following methods:
+Allowed
 
-- Native Install (Recommended)
+### Functional
 
-- Homebrew
+Functional cookies help us provide useful site features, remember your preferences, and display relevant content. Approved third parties may set these cookies to provide certain site features. If you do not allow these cookies, then some or all of these services may not function properly.
 
-- WinGet
+Allowed
 
+### Advertising
 
-**macOS, Linux, WSL:**
+Advertising cookies may be set through our site by us or our advertising partners and help us deliver relevant marketing content. If you do not allow these cookies, you will experience less relevant advertising.
 
-```
-curl -fsSL https://claude.ai/install.sh | bash
-```
+Allowed
 
-**Windows PowerShell:**
+Blocking some types of cookies may impact your experience of our sites. You may review and change your choices at any time by selecting Cookie preferences in the footer of this site. We and selected third-parties use cookies or similar technologies as specified in the [AWS Cookie Notice](https://aws.amazon.com/legal/cookies/).
 
-```
-irm https://claude.ai/install.ps1 | iex
-```
+CancelSave preferences
 
-**Windows CMD:**
+## Your privacy choices
 
-```
-curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
-```
+We and our advertising partners (“we”) may use information we collect from or about you to show you ads on other websites and online services. Under certain laws, this activity is referred to as “cross-context behavioral advertising” or “targeted advertising.”
 
-If you see `The token '&&' is not a valid statement separator`, you’re in PowerShell, not CMD. If you see `'irm' is not recognized as an internal or external command`, you’re in CMD, not PowerShell. Your prompt shows `PS C:\` when you’re in PowerShell and `C:\` without the `PS` when you’re in CMD.[Git for Windows](https://git-scm.com/downloads/win) is recommended on native Windows so Claude Code can use the Bash tool. If Git for Windows is not installed, Claude Code uses PowerShell as the shell tool instead. WSL setups do not need Git for Windows.
+To opt out of our use of cookies or similar technologies to engage in these activities, select “Opt out of cross-context behavioral ads” and “Save preferences” below. If you clear your browser cookies or visit this site from a different device or browser, you will need to make your selection again. For more information about cookies and how we use them, read our [Cookie Notice](https://aws.amazon.com/legal/cookies/).
 
-Native installations automatically update in the background to keep you on the latest version.
-
-```
-brew install --cask claude-code
-```
-
-Homebrew offers two casks. `claude-code` tracks the stable release channel, which is typically about a week behind and skips releases with major regressions. `claude-code@latest` tracks the latest channel and receives new versions as soon as they ship.
-
-Homebrew installations do not auto-update. Run `brew upgrade claude-code` or `brew upgrade claude-code@latest`, depending on which cask you installed, to get the latest features and security fixes.
-
-```
-winget install Anthropic.ClaudeCode
-```
-
-WinGet installations do not auto-update. Run `winget upgrade Anthropic.ClaudeCode` periodically to get the latest features and security fixes.
-
-You can also install with [apt, dnf, or apk](https://code.claude.com/docs/en/setup#install-with-linux-package-man
+Allow 
 
 ---
 
-## GitHub Copilot · Your AI pair programmer · GitHub
+## Liquibase Secure | The Database Change Governance Platform
 
-[Skip to content](https://github.com/features/copilot#start-of-content)
-
-You signed in with another tab or window. [Reload](https://github.com/features/copilot) to refresh your session.You signed out in another tab or window. [Reload](https://github.com/features/copilot) to refresh your session.You switched accounts on another tab or window. [Reload](https://github.com/features/copilot) to refresh your session.Dismiss alert
-
-{{ message }}
-
-GitHub Copilot
-
-# Command your craft
-
-Your AI accelerator for every workflow, from the editor to the enterprise.
-
-[Get started](https://github.com/copilot) [See plans & pricing](https://github.com/features/copilot/plans?cft=copilot_lo.features_copilot)
-
-Already have Visual Studio Code? [Open now](vscode://github.copilot-chat)
-
-![](https://github.githubassets.com/assets/hero-bg-desktop-3043dc2aac662165.webp)![](https://github.githubassets.com/assets/hero-bg-mobile-261ce6383e8047a7.webp)
-
-Pause
-
-## Companies using Copilot
-
-Coyote LogisticsDuolingoGeneral MotorsMercado LibreShopifyStripeCocaCola
-
-Coyote LogisticsDuolingoGeneral MotorsMercado LibreShopifyStripeCocaCola
-
-### Go beyond one-size-fits-all
-
-Choose from leading LLMs optimized for speed, accuracy, or cost.
-
-### Use your agents, your way
-
-Use GitHub Copilot, your own custom agents, or the third-party ones you already rely on.
-
-### Stay in your flow
-
-Copilot works where you do—in GitHub, your IDE, project tools, chat apps, and custom MCP servers.
-
-### Make your editor your most powerful accelerator
-
-Copilot in your editor does it all, from explaining concepts and completing code, to proposing edits and validating files with agent mode.
-
-[Explore Copilot in the IDE](https://github.com/features/copilot/ai-code-editor)
-
-![](https://images.ctfassets.net/8aevphvgewt8/36rqLbFzJsdRRFHNM4TXIU/afdb59a69ee38661aed3e66f73970ce2/github-copilot-agent-mode.png)
-
-### Ship faster with AI that work alongside you
-
-Assign tasks to agents like Copilot, Claude by Anthropic, and OpenAI Codex, and let them plan, explore, and execute work autonomously in the background.
-
-[Explore Copilot cloud agent](https://github.com/features/copilot/agents)
-
-![GitHub issue interface showing an “Select assignees” dialog. A search field labeled “Filter assignees” appears above a list of options. The Copilot GitHub AI assistant is selected, with additional choices including Claude (Anthropic), Codex (OpenAI), and several individual user accounts. The modal is displayed over an open issue titled “Allow users to pin side panels #1520.”](https://images.ctfassets.net/8aevphvgewt8/rWJGAKp7aOM97B6d9xqvM/c906d0f3d02ec086ec9e91fb216e3210/github-cca-3p-agents.webp)
-
-### Bring AI to your terminal workflow
-
-Direct Copilot in the terminal using natural language and watch it plan, build, and execute complex workflows powered by your GitHub context.
-
-[Explore GitHub Copilot CLI](https://github.com/features/copilot/cli)
-
-![](https://images.ctfassets.net/8aevphvgewt8/2Zamxo7a7F9K9jsTAl2EGA/bce1f04a40536e89ef543cb
-
----
-
-## Cursor: The best coding agent
-
-# Built to make you extraordinarily productive, Cursor is the best coding agent.
-
-[Download for Linux\\
-⤓](https://api2.cursor.sh/updates/download/golden/linux-x64-deb/cursor/3.6)
-
-[Try mobile agent\\
-→](https://cursor.com/agents)
-
-[Request a demo\\
-→](https://cursor.com/contact-sales?source=hero_request_demo)
-
-![](https://cursor.com/marketing-static/_next/image?url=https%3A%2F%2Fptht05hbb1ssoooe.public.blob.vercel-storage.com%2Fassets%2Fmisc%2Fasset-cc24ca462279ca23250c.jpg&w=3840&q=70)
-
-This element contains an interactive demo for sighted users showing multiple Cursor interfaces: Cursor Desktop interface, Cursor CLI interface. The interface is displayed over a subtle, solid brand background.
-
-Cursor Desktop
-
-Get Cursor
-
-http://localhost:3000
-
-Software creation is changing. We are a group of researchers, engineers, and technologists inventing at the edge of what's useful and possible.
-
-We have much to learn, try, and build.
-
-See projects [Join our team →](https://cursor.com/careers)
-
-|     |     |     |
-| --- | --- | --- |
-| 2026 | Secure codebase indexing | Published |
-| 2026 | Semantic search | Published |
-| 2025 | Reinforcement learning | Published |
-| 2024 | Shadow workspaces | Published |
-| 2024 | Multi-agent collaboration | Published |
-| 2023 | Context-aware completions | Published |
-| 2023 | Intelligent code navigation | Published |
-| 2022 | Fast inference optimization | Published |
-| 2022 | Language model fine-tuning | Published |
-
-Tagline · span
-
-Build Landing Page
-
-make a landing page based on attached docs explaining what we do
-
-Readabout-acme.md
-
-Readbrand-guidelines.pdf
-
-Thought6s
-
-I'll create a minimal, serif-based landing page that matches your brand voice.
-
-app/page.tsx+52-0
-
-app/globals.css+18-0
-
-Done. Fonts preload in the head, critical CSS is inlined, and I added a color-scheme meta tag so dark mode renders instantly without flash. 280ms first paint.
-
-AgentComposer 2.5
-
-Cursor CLI
-
-Get CLI
-
-Cursor Agent
-
-~/cursor/cursor-web
-
-Analyze Tab vs Agent Usage Patterns
-
-Help me understand how teams split their focus between the tab view and the agents panel across our workspaces.
-
-⬢
-
-Thought7s
-
-⬢
-
-Reviewedworkspaceusageexportsandhistoricalengagementnotes
-
-I'll build an analytics toolkit that highlights tab versus agent adoption and switching behavior:
-
-summary.py+150-0
-
-Next I'll normalize the interaction labels and add session tagging so product can filter specific cohorts:
-
-segmentation.py+94-0
-
-Time to stitch everything together with a report helper that combines the key metrics:
-
-report.py+40-0
-
-I'll add tests to lock in the behaviour using a representative sample from last week's export:
-
-test\_usage.py+90
-
-All set! We now track focus share, switching rates, and rolling engagement so PMs can compare tab-first and agent-first workflows in seconds.
-
-→
-
-Composer 2.5
-
-/ for commands · @ for files
-
-## Trusted every day by teams that build world-class software
-
-[**Agents turn ideas into code** \\
+[Webinar: AI Is Accelerating Database Change. Governance Must Keep Pace.\\
 \\
-Accelerate development by handing of
+Watch On-Demand ›](https://www.liquibase.com/videos/ai-is-accelerating-database-change-governance-must-keep-pace?utm_campaign=34103815-26-AIGovernance&utm_source=banner&utm_medium=banner)![](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e74/67a2001b68b81461e3b77ae6_x.svg)
+
+[![](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e74/6851e1bd04c1e6d1aa9bf067_logo-liquibase.svg)![](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e74/6838957744dd1fc8d66beaa5_liquibase-logo-dark.svg)](https://www.liquibase.com/)
+
+[G\\
+\\
+e\\
+\\
+t\\
+\\
+S\\
+\\
+t\\
+\\
+a\\
+\\
+r\\
+\\
+t\\
+\\
+e\\
+\\
+d\\
+\\
+F\\
+\\
+r\\
+\\
+e\\
+\\
+e](https://www.liquibase.com/trial)
+
+# Govern Every Database Change.  Human or AI.
+
+Standardized, audit-ready delivery across the enterprise.
+
+1
+
+Control plane
+
+65+
+
+Databases
+
+0
+
+Blind spots
+
+[G\\
+\\
+e\\
+\\
+t\\
+\\
+a\\
+\\
+d\\
+\\
+e\\
+\\
+m\\
+\\
+o\\
+\\
+![](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e74/65c3a844357606c1b08a1e91_chevron-down%20(2).svg)](https://www.liquibase.com/demo)
+
+![](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e74/69249b87463f75edd4c7f8b2_new-home-hero.svg)
+
+Trusted by the World’s Most Regulated Enterprises
+
+![Investcloud](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e98/69fce18bf8ac4bd05b64bcfd_investcloud.svg)
+
+![LeapFrog](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e98/69fb8887070f53e2756cb660_leapfrog.svg)
+
+![BlueBeam](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e98/69fb8876b924612f5ce834a2_bluebeam.svg)
+
+![Firefly Software](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e98/69fcda6a1f495492a981db22_Adobe_Firefly_Logo%201%20(2).svg)
+
+![StaffWizard](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e98/69fb87e1f0ca1f50b47d2239_staffwizard.svg)
+
+![id me](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e98/69fb87d24f8df5a3cc41e331_id-me.svg)
+
+![Sony Music Publishing](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e98/69fb87c28e537c22a16b6757_sony-music.svg)
+
+![Ripple](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e98/69fb87b44ee4504c7e5c57d8_Ripple-logo%201.svg)
+
+![Origin Energy](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e98/69fb87a60e7110dfe1a6437c_origin.svg)
+
+![Telefónica](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e98/69fb8794844a89947c29eafb_Telefo%CC%81nica_2021_logo%201.svg)
+
+![TransUnion](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e98/69fb8785b2d471e0d060b25b_TransUnion_logo%201.svg)
+
+![Global Payments](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e98/69fb8776f2c548a18c5a42a7_Global_Payments_Inc._logo%201.svg)
+
+![BNP Paribas](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e98/69fce0ecf433fbe5245b8d85_BNP_Paribas_logo%201.svg)
+
+![Monetary Authority of Singapore](https://cdn.prod.website-files.com/65c3a844357606c1b08a1e98/69fce0c5c8dc059ba922640d_Monetary_Authority_of_S
 
 ---
 
-## Windsurf - The best AI for Coding
+## Redgate Flyway Documentation - Redgate Flyway - Product Documentation
 
-[NewIntroducing Windsurf 2.0](https://windsurf.com/blog/windsurf-2-0)
+![](https://documentation.red-gate.com/download/attachments/138346876/FD?version=3&modificationDate=1633982869952&api=v2)
 
-# Where developers    are doing their best work.
+# Redgate Flyway
 
-Download for Linux [Explore Features](https://windsurf.com/editor)
+Help for [older versions](https://documentation.red-gate.com/fd/release-notes-and-other-versions) available.
 
-Ship more with local and cloud agents working together.
+Which editor(s) do you use for database development?
 
-Reply Logo
+DataGrip
 
-Reply Logo
+DBeaver
 
-Reply Logo
+SQL Server Management Studio
 
-Explore the features
+pgAdmin
 
-## Cascade
+mySQL Workbench
 
-Cascade combines deep codebase understanding, a breadth of advanced tools, and a real-time awareness of your actions into a powerful, seamless, and collaborative flow. It is the most powerful way to code with AI.
+Toad
 
-Cascade, an agent that codes, fixes and thinks 10 steps ahead
+VS Code
 
-Built to keep you in flow by understanding your intent and handling the complex codebases so you can focus on the fun stuff.
+Azure Data Studio
 
-[Explore Cascade Features](https://windsurf.com/cascade)
+Oracle SQL Developer
 
-## Devin
+Navicat
 
-Devin is our autonomous cloud agent built directly into Windsurf. Delegate complex tasks — debugging, testing, deployment — to Devin and keep coding locally, or close your laptop and come back later.
+IntelliJ IDEA
 
-Delegate work to the cloud. Keep coding locally.
+Other:
 
-Plan with Cascade, hand off to Devin with a single click. Devin spins up its own machine and works while you focus on what's next.
+VoteView Results
 
-[Learn about Devin](https://windsurf.com/blog/windsurf-2-0)
+# Redgate Flyway Documentation
 
-## Tab Tab Tab...Ship
+Page last updated 23 February 2026
 
-A single keystroke, limitless power, complete flow. The full power of Windsurf Tab is exclusive to the Windsurf Editor. Our IDE plugins include only the autocomplete action.
+Published 11 October 2021
 
-Windsurf Tab: Many Actions, One Effortless Flow
+Redgate Flyway extends DevOps to your databases to accelerate software delivery and ensure quality code so you can deploy with confidence. From version control to continuous delivery, Flyway builds on application delivery processes to automate database deployments.
 
-Tab to move your cursor. Tab to import your dependencies. Tab to glory.
+### Flyway
 
-[Tab Features](https://windsurf.com/tab)
+|     |     |
+| --- | --- |
+| **Flyway Desktop** offers a GUI-based experience for database developers and data professionals to track changes to their database objects and manage migration scripts in version control. <br> It runs on Windows, macOS, and Linux. | **Flyway Command Line** runs on Windows, macOS, Linux, and is available on docker.  It is primarily meant for users who wish to migrate their database from the command line and is used in CI/CD systems.<br>Flyway can be integrated within an application using the **API**, allowing migrations to be applied when the application starts. |
 
-FEATURES
+### Flyway Autopilot
 
-#### One editor.   Unlimited superpowers.
+**Experience Flyway Autopilot: Test our Flyway tool’s capabilities in under 30 minutes with ease!**
 
-New
+Get everything installed and configured on your own infrastructure—no hassle, just results. Spin up personalized test environments based on your schema and discover how Flyway can streamline your DevOps process, from version control and script generation to full CI/CD automation.
 
-Devin
+Whether you're new to Flyway or looking to explore its full potential, our Autopilots have you covered. With Redgate and Flyway Autopilot, trying out our tools and seeing their value has never been so Ingeniously Simple!
 
-Delegate complex tasks to Devin, our autonomous cloud agent that works on its own machine while you keep coding.
+Follow along with our [Flyway Autopilot guide and exercise book](https://documentation.red-gate.com/fd/flyway-autopilot-let-us-be-your-guide-303170997.html).
 
-Devin is working
+[![](https://documentation.red-gate.com/fd/files/138346877/254154573/1/1725639707370/Screenshot+2023-08-29+133557.png)](https://documentation.red-gate.com/fd/first-steps-flyway-autopilot-a-beginners-guide-254152325.html)
 
-Task
+### Flyway Desktop
 
-Fix authentication bug in login flow
+Watch this [6.5 minute video](https://vimeo.com/691924061) for a quick overview.
 
-PR #142 ready for review
+How to Get Started With Flyway Desktop \| Redgate - YouTube
 
-MCP Support
+Tap to unmute
 
-Enhance your AI workflows by connecting custom tools and services. Access curated MCP servers in Windsurf settings for one click set-up.
+[How to Get Started With Flyway Desktop \| Redgate](https://www.youtube.com/watch?v=kiOknzNggHE) [Redgate Software](https://www.youtube.com/channel/UCuthFQQx3015i9Rvqw3U1VA)
 
-Figma 5 tools
+Redgate Software11.6K subscribers
 
-Slack 7 tools
+For more information, visit:
 
-Stripe 9 tools
+- [Database Development using Flyway](https://documentation.red-gate.com/fd/database-development-using-flyway-138
 
-Sequential Thinking 3 tools
+---
 
-Plugin Store
+## The Context Layer for AI Agents | Airbyte
 
-Manage Plugins
+[New: Airbyte Agents. Context-aware AI, built on your data.](https://airbyte.com/blog/airbyte-agents)
+
+The problem
+
+Everyagenttoolconnectstoyoursystems.Noneofthemunderstandtherelationshipsbetweenthem.Yourcustomerisn'taSalesforcerecord,aZendeskticket,andaStripeinvoice.They'reoneperson.
+
+Yourmigrationisn'taLinearticket,aGitHubbranch,andaSlackthread.It'soneproject.Untilyouragentsseeitthatway,they'llkeepgivingyoushallowanswers.
+
+THE SOLUTION
+
+## Meet the Context Store
+
+Without context, agents make things up. Airbyte gives every agent a live, searchable index of your customers, deals, tickets, and conversations across your tools. Your agents stop guessing. They know.
+
+Connect
+
+ASK
+
+ACt
+
+Salesforce
+
+14,302 contacts
+
+Zendesk
+
+2,341 support tickets
+
+Stripe
+
+8,710 invoices
 
 GitHub
 
-Add server +
+1,247 repositories
 
-PostgresSQL
+Jira
 
-Add server +
+892 open projects
 
-Playwright
+##### 600+ apps, connected in minutes
 
-Add server +
+Authenticate once. Airbyte handles the sync, schema, and updates.
 
-Neon
+What do we know about Sarah Chen?
 
-Add server +
+AGENT
 
-Figma
+Sarah Chen
 
-Configure
+VP Engineering, Datacore Systems
 
-Slack
+Salesforce
 
-Configure
+$85K deal in Proposal, 3 days since last activity
 
-Lint Fixing
+Gong
 
-Cascade will automatically detect and fix lint errors that it generates.
+4 calls in last 30 days, latest: pricing review Mar 26
 
-4 new linter errors
+##### Find anything, across every tool
 
-Auto-fix on
+Search every connected system at once and get results tagged by source.
 
-Edited
+What's the status of the Datacore Systems deal?
 
-panel.ts
+AGENT
 
-0 new linter errors found
+Datacore Systems has an $85K deal in Proposal stage
 
-Drag & Drop Images
+salesforce
 
-Build your designs instantly by dropping an image into Cascade.
+,
 
-Change my layout to match these designs
+3 Gong calls in the last 30 days
 
-Build out my designs
+GONG
 
-New
+, and 2 open support tickets
 
-Agent Command Center
+about API rate limits
 
-Manage every agent — local Cascade sessions and cloud Devin sessions — in one unified Kanban-style dashboard.
+ZENDESK
 
-In progress
+.
 
-Cascade
+Pulled from
 
-Refactor API layer
+SALESFORCEGONGZENDESK
 
-Devin
+##### Ask a business question, get a cross-system answer
 
-Add test coverage
+One prompt pulls context from Salesforce, Gong, Zendesk, and anywhere else you're connected.
 
-Ready
+the results
 
-Devin
+## Better context. Faster agents.
 
-Fix CI pipeline
+From our open-source benchmarks comparing the Airbyte MCP with native MCPs and APIs from Salesforce, Gong, Slack, Linear, and Zendesk.
 
-New
+### 80%
 
-Spaces
+fewer tokens on a single query
 
-Bundle agent sessions, PRs, files, and shared context around a single task — so you never lose your place.
+with the airbyte MCP.
 
-Auth Overhaul
+### 40%
 
-Cascade: Plan auth changes
+fewer tool calls compared with
 
-Devin: Implement OAuth flow
+native vendor mcPs.
 
-PR #89 · 
+### 90%
+
+cost savings on multi-source
+
+queries.
+
+Benefits
+
+## What Airbyte unlocks for your agents
+
+They see your business the way you do: every system, every record, in real time.
+
+![Grid of software logos including DaVinci Resolve, HubSpot, Notion, Salesforce, GitHub, Stripe and others](https://airbyte.com/images/feature-1.png)
+
+##### Your agent plugs into everything
+
+Pre-built connectors to every tool your team already uses. CRM, support, billing, HR, plus the dev tools underneath. One-click setup with managed auth. No API keys, no webhooks, no maintenance. New connectors land every week.
+
+![Dashboard showing Sarah Chen's profile with support tickets, unpaid invoices, and integrations with Slack, Stripe, and other apps](https://airbyte.com/images/Features-2.png)
+
+##### Your agent knows your business
+
+Every customer record, support ticket, pull request, invoice, and conversation. Synced, structured, and queryable in one place. Your agent doesn’t fire off a dozen API calls on the fly and hope not
 
 ---
 
