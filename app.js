@@ -56,6 +56,8 @@ async function research() {
         `reports/${topic.replace(/\s+/g, "-").toLowerCase()}.md`;
 
     fs.writeFileSync(filename, report, "utf8");
+    console.log("Report saved successfully");
+    console.log("About to start AI analysis");
     console.log("\nGenerating AI analysis...");
 
 const analysis = await analyzeResearch(report);
@@ -74,4 +76,7 @@ console.log(`Saved: ${analysisFile}`);
     console.log(`\nSaved: ${filename}`);
 }
 
-research();
+research().catch(err => {
+    console.error("FULL ERROR:");
+    console.error(err);
+});
