@@ -1,104 +1,111 @@
-\# AI Research Assistant
+# AI Research Agent v1.0
 
+An AI-powered research platform that automatically discovers web sources, extracts content, generates research reports, and produces AI-driven analysis using a local LLM.
 
+## Features
 
-A Node.js-based research automation tool that uses Firecrawl to scrape multiple websites and generate consolidated Markdown research reports.
+* Dynamic topic discovery using Tavily Search
+* Multi-source web scraping with Firecrawl
+* AI-powered report generation using Ollama and Llama 3.2
+* Research history tracking
+* Browser-based dashboard
+* Clickable report viewer
+* Markdown report generation
+* Styled HTML report rendering
+* Local-first architecture (no paid LLM required)
 
+## Architecture
 
+User Topic
 
-\## Features
+↓
 
+Web Dashboard (Express)
 
+↓
 
-\* Topic-based research generation
+Tavily Search
 
-\* Multi-site web scraping
+↓
 
-\* Markdown report generation
+Source Discovery
 
-\* Firecrawl API integration
+↓
 
-\* CLI-based workflow
+Firecrawl Scraping
 
+↓
 
+Research Report
 
-\## Tech Stack
+↓
 
+Ollama API (Llama 3.2)
 
+↓
 
-\* Node.js
+AI Analysis
 
-\* Firecrawl API
+↓
 
-\* JavaScript
+Research History + Report Viewer
 
-\* Git/GitHub
+## Tech Stack
 
+* Node.js
+* Express.js
+* Tavily API
+* Firecrawl API
+* Ollama
+* Llama 3.2
+* JavaScript
+* Git / GitHub
 
+## Key Features Implemented
 
-\## Project Structure
+### Research Engine
 
+* Automatic source discovery
+* Dynamic topic support
+* Multi-source scraping
+* AI-generated analysis
 
+### Dashboard
 
-```text
+* Research topic submission
+* Research history
+* Clickable report navigation
+* Browser-based report viewing
 
-reports/
+### AI Analysis
 
-src/
+* Executive Summary
+* Key Findings
+* Tool Comparison
+* Recommendations
+* Risks and Limitations
+* Confidence Score
 
-app.js
-
-.env
-
-```
-
-
-
-\## Usage
-
-
+## Example Topics
 
 ```bash
+node app.js "vector databases"
 
-node app.js "AI coding assistants"
+node app.js "performance testing tools"
 
+node app.js "database migration validation"
 ```
 
+## Future Enhancements
 
+* PDF export
+* Research statistics dashboard
+* Report download support
+* Multi-agent research workflow
 
-```bash
+## Resume Highlights
 
-node app.js "database migration tools"
-
-```
-
-
-
-Reports are automatically generated in the reports folder.
-
-
-
-\## Future Improvements
-
-
-
-\* AI-powered summarization
-
-\* Automatic URL discovery
-
-\* Executive summaries
-
-\* Comparison tables
-
-\* PDF export
-
-\* Scheduled research runs
-
-
-
-```
-
-```
-
-
-
+* Built a full-stack AI Research Agent using Node.js, Express, Tavily, Firecrawl, and Ollama.
+* Automated source discovery, web scraping, report generation, and AI analysis.
+* Integrated a local LLM (Llama 3.2) through the Ollama API.
+* Developed a browser-based dashboard with research history and report viewing capabilities.
