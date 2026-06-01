@@ -1,149 +1,111 @@
-# AI Research Assistant
+# AI Research Agent v1.0
 
-An AI-powered research automation tool built with Node.js, Firecrawl, and Ollama (Llama 3).
-
-The application automatically collects information from multiple web sources, generates research reports, and produces AI-powered analysis with executive summaries and recommendations.
+An AI-powered research platform that automatically discovers web sources, extracts content, generates research reports, and produces AI-driven analysis using a local LLM.
 
 ## Features
 
-* Topic-based research generation
-* Multi-source web scraping using Firecrawl
-* Automatic Markdown report generation
-* Local AI analysis using Llama 3 (Ollama)
-* Executive summaries
-* Key findings extraction
-* Recommendations generation
-* Command-line interface (CLI)
+* Dynamic topic discovery using Tavily Search
+* Multi-source web scraping with Firecrawl
+* AI-powered report generation using Ollama and Llama 3.2
+* Research history tracking
+* Browser-based dashboard
+* Clickable report viewer
+* Markdown report generation
+* Styled HTML report rendering
+* Local-first architecture (no paid LLM required)
 
 ## Architecture
 
 User Topic
+
 ↓
-Topic Router
+
+Web Dashboard (Express)
+
 ↓
-Relevant URLs
+
+Tavily Search
+
 ↓
-Firecrawl Scraper
+
+Source Discovery
+
 ↓
+
+Firecrawl Scraping
+
+↓
+
 Research Report
+
 ↓
-Llama 3 Analysis
+
+Ollama API (Llama 3.2)
+
 ↓
-Executive Summary
+
+AI Analysis
+
 ↓
-Recommendations
+
+Research History + Report Viewer
 
 ## Tech Stack
 
 * Node.js
+* Express.js
+* Tavily API
 * Firecrawl API
 * Ollama
-* Llama 3
+* Llama 3.2
 * JavaScript
-* Git/GitHub
+* Git / GitHub
 
-## Project Structure
+## Key Features Implemented
 
-```text
-ai-research-assistant/
-│
-├── reports/
-│   ├── ai-coding-assistants.md
-│   ├── database-migration-tools.md
-│   └── database-migration-tools-analysis.md
-│
-├── src/
-│   ├── search.js
-│   └── analyze.js
-│
-├── app.js
-├── .env
-├── package.json
-└── README.md
-```
+### Research Engine
 
-## Installation
+* Automatic source discovery
+* Dynamic topic support
+* Multi-source scraping
+* AI-generated analysis
 
-### Clone Repository
+### Dashboard
 
-```bash
-git clone https://github.com/01ayuvi/ai-research-assistant.git
-cd ai-research-assistant
-```
+* Research topic submission
+* Research history
+* Clickable report navigation
+* Browser-based report viewing
 
-### Install Dependencies
-
-```bash
-npm install
-```
-
-### Configure Environment
-
-Create a `.env` file:
-
-```env
-FIRECRAWL_API_KEY=your_firecrawl_api_key
-```
-
-### Install Ollama
-
-```bash
-winget install Ollama.Ollama
-```
-
-### Download Llama 3
-
-```bash
-ollama pull llama3
-```
-
-## Usage
-
-### Database Migration Research
-
-```bash
-node app.js "database migration tools"
-```
-
-### AI Coding Assistants Research
-
-```bash
-node app.js "AI coding assistants"
-```
-
-## Example Output
-
-The application generates:
-
-* Raw research report (`.md`)
-* AI analysis report (`-analysis.md`)
-
-Example analysis sections:
+### AI Analysis
 
 * Executive Summary
 * Key Findings
 * Tool Comparison
 * Recommendations
 * Risks and Limitations
+* Confidence Score
 
-## Current Limitations
+## Example Topics
 
-* Uses predefined source mappings
-* Limited topic coverage
-* No automatic web search yet
+```bash
+node app.js "vector databases"
+
+node app.js "performance testing tools"
+
+node app.js "database migration validation"
+```
 
 ## Future Enhancements
 
-* Automatic URL discovery
-* Tavily Search integration
 * PDF export
-* Research history tracking
-* Confidence scoring
-* Contradiction detection
+* Research statistics dashboard
+* Report download support
+* Multi-agent research workflow
 
 ## Resume Highlights
 
-* Built an AI-powered research assistant using Node.js, Firecrawl, and Ollama.
-* Automated web research, content extraction, report generation, and AI-driven analysis.
-* Integrated a local LLM (Llama 3) for executive summaries and recommendations.
-* Designed an end-to-end research pipeline from data collection to insight generation.
+* Built a full-stack AI Research Agent using Node.js, Express, Tavily, Firecrawl, and Ollama.
+* Automated source discovery, web scraping, report generation, and AI analysis.
+* Integrated a local LLM (Llama 3.2) through the Ollama API.
+* Developed a browser-based dashboard with research history and report viewing capabilities.
