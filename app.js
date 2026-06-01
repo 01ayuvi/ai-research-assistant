@@ -3,6 +3,7 @@ require("dotenv").config();
 const FirecrawlApp = require("firecrawl").default;
 const fs = require("fs");
 const getUrlsForTopic = require("./src/search");
+const discoverUrls = require("./src/discover");
 const analyzeResearch = require("./src/analyze");
 
 const topic = process.argv[2];
@@ -19,11 +20,21 @@ const app = new FirecrawlApp({
 async function research() {
     console.log(`Researching: ${topic}\n`);
 
-    const urls = await getUrlsForTopic(topic);
+    let urls = await discoverUrls(topic);
+
+    console.log("URLs discovered:");
+    console.log(urls);
+    console.log();
 
     if (urls.length === 0) {
-        console.log("No sources found for this topic.");
-        return;
+        console.log("Tavily found no URLs, falling back to local mappings...");
+
+        urls = await getUrlsForTopic(topic);
+
+        if (urls.length === 0) {
+            console.log("No sources found for this topic.");
+            return;
+        }
     }
 
     let report = `# Research Report\n\n`;
@@ -56,23 +67,23 @@ async function research() {
         `reports/${topic.replace(/\s+/g, "-").toLowerCase()}.md`;
 
     fs.writeFileSync(filename, report, "utf8");
+
     console.log("Report saved successfully");
     console.log("About to start AI analysis");
     console.log("\nGenerating AI analysis...");
 
-const analysis = await analyzeResearch(report);
+    const analysis = await analyzeResearch(report);
 
-const analysisFile =
-    `reports/${topic.replace(/\s+/g, "-").toLowerCase()}-analysis.md`;
+    const analysisFile =
+        `reports/${topic.replace(/\s+/g, "-").toLowerCase()}-analysis.md`;
 
-fs.writeFileSync(
-    analysisFile,
-    analysis,
-    "utf8"
-);
+    fs.writeFileSync(
+        analysisFile,
+        analysis,
+        "utf8"
+    );
 
-console.log(`Saved: ${analysisFile}`);
-
+    console.log(`Saved: ${analysisFile}`);
     console.log(`\nSaved: ${filename}`);
 }
 
