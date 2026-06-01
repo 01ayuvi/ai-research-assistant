@@ -38,5 +38,19 @@
     "sources": 3,
     "report": "reports/vector-databases.md",
     "analysis": "reports/vector-databases-analysis.md"
+  },
+  {
+    "topic": "database migration validation",
+    "date": "2026-06-01T07:19:53.965Z",
+    "sources": 3,
+    "report": "reports/database-migration-validation.md",
+    "analysis": "reports/database-migration-validation-analysis.md"
+  },
+  {
+    "topic": "vector databases",
+    "date": "2026-06-01T07:23:01.627Z",
+    "sources": 3,
+    "report": "reports/vector-databases.md",
+    "analysis": "reports/vector-databases-analysis.md"
   }
 ]

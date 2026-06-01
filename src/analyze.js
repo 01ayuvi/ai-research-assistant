@@ -1,42 +1,49 @@
-const { execSync } = require("child_process");
+const axios = require("axios");
 
 async function analyzeResearch(content) {
-    try {
-        const prompt = `
+
+    const prompt = `
 You are a senior technology research analyst.
 
-Generate a professional report with:
+Generate a professional report in Markdown.
 
-1. Executive Summary
-2. Key Findings
-3. Tool Comparison
-4. Pros and Cons of each major tool
-5. Recommendations for:
-   - Small Teams
-   - Startups
-   - Enterprises
-6. Risks and Limitations
-7. Confidence Score (0-100)
+Use:
+
+# Title
+## Executive Summary
+## Key Findings
+## Tool Comparison
+## Recommendations
+## Risks and Limitations
+## Confidence Score
 
 Research:
 
 ${content.substring(0, 1500)}
 `;
 
-        const result = execSync(
-    `ollama run llama3.2:3b`,
-    {
-        input: prompt,
-        encoding: "utf8",
-        maxBuffer: 1024 * 1024 * 20
-    }
-);
+    try {
 
-        return result;
+        const response =
+            await axios.post(
+                "http://localhost:11434/api/generate",
+                {
+                    model: "llama3.2:3b",
+                    prompt: prompt,
+                    stream: false
+                }
+            );
+
+        return response.data.response;
+
     } catch (error) {
+
         console.error(error);
-        return error.message;
+
+        return "Analysis failed.";
+
     }
+
 }
 
 module.exports = analyzeResearch;
