@@ -5,6 +5,7 @@ const fs = require("fs");
 const getUrlsForTopic = require("./src/search");
 const discoverUrls = require("./src/discover");
 const analyzeResearch = require("./src/analyze");
+const saveHistory = require("./src/history");
 
 const topic = process.argv[2];
 
@@ -84,6 +85,13 @@ async function research() {
     );
 
     console.log(`Saved: ${analysisFile}`);
+    saveHistory({
+    topic,
+    date: new Date().toISOString(),
+    sources: urls.length,
+    report: filename,
+    analysis: analysisFile
+});
     console.log(`\nSaved: ${filename}`);
 }
 
