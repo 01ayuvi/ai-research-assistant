@@ -80,8 +80,17 @@ let html =
 history.reverse().forEach(item=>{
 
 html += `
-<div>
-<b>${item.topic}</b>
+<div style="margin-bottom:10px">
+
+<a
+href="/report/${item.topic.replace(/\s+/g,"-").toLowerCase()}"
+target="_blank"
+>
+
+${item.topic}
+
+</a>
+
 </div>
 `;
 

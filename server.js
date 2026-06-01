@@ -35,6 +35,35 @@ app.get("/history", (req, res) => {
 
 });
 
+app.get("/report/:topic", (req, res) => {
+
+    const topic = req.params.topic;
+
+    const file =
+        `reports/${topic}-analysis.md`;
+
+    try {
+
+        const content =
+            fs.readFileSync(
+                file,
+                "utf8"
+            );
+
+        res.send(
+            `<pre>${content}</pre>`
+        );
+
+    } catch {
+
+        res.send(
+            "Report not found"
+        );
+
+    }
+
+});
+
 app.post("/research", (req, res) => {
 
     const topic = req.body.topic;
