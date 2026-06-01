@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Research Agent</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+}
+
+input{
+    width:70%;
+    padding:12px;
+}
+
+button{
+    padding:12px 20px;
+}
+
+#status{
+    margin-top:20px;
+    padding:15px;
+    border:1px solid #ccc;
+}
+
+#history{
+    margin-top:20px;
+    padding:15px;
+    border:1px solid #ccc;
+}
+</style>
+</head>
+
+<body>
+
+<h1>AI Research Agent</h1>
+
+<form id="researchForm">
+
+<input
+id="topic"
+placeholder="Enter research topic"
+required
+>
+
+<button>
+Research
+</button>
+
+</form>
+
+<div id="status">
+Ready
+</div>
+
+<div id="history">
+Loading history...
+</div>
+
+<script>
+
+async function loadHistory(){
+
+const response =
+await fetch("/history");
+
+const history =
+await response.json();
+
+let html =
+"<h3>Recent Research</h3>";
+
+history.reverse().forEach(item=>{
+
+html += `
+<div>
+<b>${item.topic}</b>
+</div>
+`;
+
+});
+
+document
+.getElementById("history")
+.innerHTML = html;
+
+}
+
+loadHistory();
+
+document
+.getElementById("researchForm")
+.addEventListener("submit",async(e)=>{
+
+e.preventDefault();
+
+const topic =
+document.getElementById("topic").value;
+
+document
+.getElementById("status")
+.innerHTML =
+"Research running...";
+
+const response =
+await fetch("/research",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+topic
+})
+});
+
+const result =
+await response.json();
+
+document
+.getElementById("status")
+.innerHTML =
+`Research complete:<br>${topic}`;
+
+loadHistory();
+
+});
+
+</script>
+
+</body>
+</html>

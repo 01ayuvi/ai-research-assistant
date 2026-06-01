@@ -54,7 +54,7 @@ async function research() {
 
             report +=
                 (result.markdown || "")
-                    .substring(0, 3000);
+                    .substring(0, 1000);
 
             report += "\n\n---\n\n";
 

@@ -20,17 +20,17 @@ Generate a professional report with:
 
 Research:
 
-${content.substring(0, 3000)}
+${content.substring(0, 1500)}
 `;
 
         const result = execSync(
-            `ollama run llama3`,
-            {
-                input: prompt,
-                encoding: "utf8",
-                maxBuffer: 1024 * 1024 * 20
-            }
-        );
+    `ollama run llama3.2:3b`,
+    {
+        input: prompt,
+        encoding: "utf8",
+        maxBuffer: 1024 * 1024 * 20
+    }
+);
 
         return result;
     } catch (error) {

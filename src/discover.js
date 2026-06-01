@@ -7,7 +7,7 @@ async function discoverUrls(topic) {
 
     try {
         const response = await client.search(topic, {
-            maxResults: 5
+            maxResults: 3
         });
 
         return response.results.map(
